@@ -4,9 +4,9 @@
   remote_user: suyash
   become: false
   tasks:
-    - name: Install Docker 
-      ansible.builtin.pip:
-        name: docker
+    # - name: Install Docker 
+    #   ansible.builtin.pip:
+    #     name: docker
     - name: Install Docker Py
       ansible.builtin.pip:
         name: docker-py
