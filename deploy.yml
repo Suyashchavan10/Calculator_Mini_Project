@@ -18,6 +18,9 @@
       service:
         name: docker
         state: started
-        
+
+    - name: Remove old container
+      shell: docker rm -f calculator
+      
     - name: Running container
-      shell: docker run -it -d --name calculator suyash1910/calculator
+      shell: docker run -it -d --name calculator suyash1910/calculator:latest
