@@ -21,7 +21,7 @@ pipeline {
                 script {
                     // create the jar file
                     dir("Calculator_Maven") {
-                        sh 'sudo mvn clean package'
+                        sh 'mvn clean package'
                     }
                 }
             }
