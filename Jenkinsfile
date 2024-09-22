@@ -40,6 +40,7 @@ pipeline {
             steps {
                 script {
                     ansiblePlaybook(
+                        installation: 'Ansible',
                         playbook: 'deploy.yml',
                         inventory: 'inventory.ini'
                      )

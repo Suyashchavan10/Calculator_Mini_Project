@@ -4,12 +4,6 @@
   remote_user: suyash
   become: false
   tasks:
-    # - name: Install Docker 
-    #   ansible.builtin.pip:
-    #     name: docker
-    - name: Install Docker Py
-      ansible.builtin.pip:
-        name: docker-py
     - name: Pull Docker Image
       docker_image:
         name: "suyash1910/calculator"
