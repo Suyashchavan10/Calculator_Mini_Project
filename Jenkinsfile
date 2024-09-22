@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // create the jar file
-                    // sh 'mvn clean package'
+                    sh 'mvn clean package'
                     // dir("Calculator_Maven") {
                         // sh 'mvn clean package'
                     // }
