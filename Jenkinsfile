@@ -16,6 +16,28 @@ pipeline {
             }
         }
 
+        stage('Build Maven Project') {
+            steps {
+                script {
+                    // create the jar file
+                    dir("Calculator_Maven") {
+                        sh 'mvn clean package'
+                    }
+                }
+            }
+        }
+
+        stage('Unit Testing') {
+            steps {
+                script {
+                    // do unit testing
+                    dir("Calculator_Maven") {
+                        sh 'mvn test'
+                    }
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
