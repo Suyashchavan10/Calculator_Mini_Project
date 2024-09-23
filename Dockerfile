@@ -15,3 +15,5 @@ COPY ./target/*.jar /app/
 # CMD sed -i 's/\r$//' /app/calculator.sh
 
 ENTRYPOINT ["java", "-jar", "/app/Calculator_Mini_Project-1.0.0-SNAPSHOT.jar"]
+
+# we can directly use image of openjdk, it will be faster.
