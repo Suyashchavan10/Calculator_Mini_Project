@@ -16,4 +16,4 @@ COPY ./target/*.jar /app/
 
 ENTRYPOINT ["java", "-jar", "/app/Calculator_Mini_Project-1.0.0-SNAPSHOT.jar"]
 
-# we can directly use image of openjdk, it will be faster. (try later)
+# we can directly use image of openjdk, it will be faster. (try later to use it)
