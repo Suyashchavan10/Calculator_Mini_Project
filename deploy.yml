@@ -19,8 +19,13 @@
         name: docker
         state: started
 
-    - name: Remove old container
-      shell: docker rm -f calculator
+    # - name: Remove old container
+    #   shell: docker rm -f calculator
+
+    - name: Remove old container if it exists
+      docker_container:
+        name: calculator
+        state: absent
       
     - name: Running container
       shell: docker run -it -d --name calculator suyash1910/calculator:latest
