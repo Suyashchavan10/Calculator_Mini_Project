@@ -1,14 +1,19 @@
-# get ubuntu base image to build on
-FROM ubuntu:latest
+# Method 1: Use ubuntu as base image and then install openjdk over it - not efficient
+# # get ubuntu base image to build on
+# FROM ubuntu:latest
 
-# update packages
-RUN apt-get update
+# # update packages
+# RUN apt-get update
 
-# install openJdk 17
-RUN apt-get install -y openjdk-17-jdk
+# # install openJdk 17
+# RUN apt-get install -y openjdk-17-jdk
 
-# set JAVA_HOME environment variable
-ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-17*/
+# # set JAVA_HOME environment variable
+# ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-17*/
+
+
+# Method 2: Directly use openjdk as base image
+FROM openjdk:17-jdk
 
 # copy the jar file
 COPY ./target/*.jar /app/
