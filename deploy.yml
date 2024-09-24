@@ -32,7 +32,7 @@
         name: calculator
         image: suyash1910/calculator:latest
         state: started
-        detach: false
+        detach: true
         tty: true
       
     # - name: Running container
