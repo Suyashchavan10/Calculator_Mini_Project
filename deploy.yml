@@ -26,6 +26,14 @@
       docker_container:
         name: calculator
         state: absent
-      
+
     - name: Running container
-      shell: docker run -it -d --name calculator suyash1910/calculator:latest
+      docker_container:
+        name: calculator
+        image: suyash1910/calculator:latest
+        state: started
+        detach: true
+        tty: true
+      
+    # - name: Running container
+    #   shell: docker run -it -d --name calculator suyash1910/calculator:latest
