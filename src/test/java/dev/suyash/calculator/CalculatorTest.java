@@ -29,7 +29,7 @@ public class CalculatorTest {
 
     @Test
     public void testMultiplication() {
-        assertEquals(15.0, calculator.multiplication(3.0, 5.0), "Expected 15.0 as result of 3.0 * 5.0");
+        assertEquals(16.0, calculator.multiplication(3.0, 5.0), "Expected 15.0 as result of 3.0 * 5.0");
 
         assertEquals(-20.0, calculator.multiplication(-4.0, 5.0), "Expected -20.0 as result of -4.0 * 5.0");
     }
