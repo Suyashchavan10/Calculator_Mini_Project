@@ -1,17 +1,16 @@
 package dev.suyash.calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
 
-    private Calculator calculator;
+    private Calculator calculator = new Calculator();
 
-    @BeforeEach
-    public void setUp() {
-        calculator = new Calculator();
-    }
+    // @BeforeEach
+    // public void setUp() {
+    //     calculator = new Calculator();
+    // }
 
     @Test
     public void testAddition() {
